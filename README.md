@@ -1,4 +1,4 @@
-# Java-Training2023
+
 # Java-Training2023
 
 ### Exercise 1: Basic Inheritance
