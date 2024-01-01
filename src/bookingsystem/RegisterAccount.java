@@ -9,7 +9,7 @@ public class RegisterAccount {
     private String FirstName;
     private String LastName;
 
-    private int PhoneNumebr;
+    private long PhoneNumebr;
     private String EmailId;
 
     private String Address;
@@ -30,11 +30,11 @@ public class RegisterAccount {
         LastName = lastName;
     }
 
-    public int getPhoneNumebr() {
+    public long getPhoneNumebr() {
         return PhoneNumebr;
     }
 
-    public void setPhoneNumebr(int phoneNumebr) {
+    public void setPhoneNumebr(long phoneNumebr) {
         PhoneNumebr = phoneNumebr;
     }
 
@@ -53,7 +53,7 @@ public class RegisterAccount {
     public void setAddress(String address) {
         Address = address;
     }
-    RegisterAccount(String fname,String lname,int number,String emailId,String address){
+    RegisterAccount(String fname,String lname,long number,String emailId,String address){
         this.FirstName=fname;
         this.LastName=lname;
         this.PhoneNumebr=number;
@@ -62,7 +62,7 @@ public class RegisterAccount {
 
     }
     public void WriteInfo(){
-        String folderPath = "D:\\Masters\\Future\\java\\JavaTraining\\src\\bookingsystem\\javaFolder";
+        String folderPath = "D:\\Masters\\Future\\java\\javaTraining2023_24\\src\\bookingsystem\\javaFolder";
         File folder=new File(folderPath);
         if(!folder.exists()){
             boolean create=folder.mkdir();

@@ -3,7 +3,7 @@ package bookingsystem;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void displayMenu(){
         System.out.println("  hotel booking management  ");
 
         System.out.println("  Please select your preffered choice ");
@@ -14,40 +14,55 @@ public class Main {
                 "\t4. feedback ");
         System.out.println(" please provide your option: ");
 
-        int number;
-        Scanner scan=new Scanner(System.in);
-        number=scan.nextInt();
-        switch(number){
-            case 1: System.out.println("welcome to register");
-            break;
-            case 2: System.out.println("Welcome to reservation");
-            break ;
-            case 3:System.out.println("Welcome to bill");
-            break;
-            case 4: System.out.println("Welcome to feedback");
+    }
 
-        }
-
-
+    public static void Register(){
         Scanner sn=new Scanner(System.in);
         System.out.print("Please enter your First Name :");
         String FirstName=sn.nextLine();
-
         System.out.print("Please enter your Last Name :");
         String LastName=sn.nextLine();
-
-
         System.out.print("Please enter your Email ID : ");
         String Email= sn.nextLine();
-
         System.out.print("Please enter your Address : ");
         String Address=sn.nextLine();
-
         System.out.print("Please enter your phone number :");
-        int PhoneNumber= sn.nextInt();
+        long PhoneNumber= sn.nextLong();
 
         RegisterAccount r=new RegisterAccount(FirstName,LastName,PhoneNumber,Email,Address);
         r.WriteInfo();
+    }
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        char choice;
+
+        do{
+            displayMenu();
+            int number;
+            Scanner sn=new Scanner(System.in);
+            number=sn.nextInt();
+            switch(number){
+                case 1: System.out.println("welcome to register");
+                    Register();
+                    break;
+                case 2: System.out.println("Welcome to reservation");
+                    break ;
+                case 3:System.out.println("Welcome to bill");
+                    break;
+                case 4: System.out.println("Welcome to feedback");
+                case 5:
+                    System.out.println("Exiting the program");
+                    return; // Exit the program when the user chooses to exit
+                default:
+                    System.out.println("Invalid choice. Please enter a valid option.");
+
+            }
+            System.out.println("Do you want to continue? (Y/N)");
+            choice = scan.next().charAt(0);
+        }while(Character.toUpperCase(choice)=='Y');
+
+
+
 
     }
 }
