@@ -3,6 +3,8 @@ package bookingsystem;
 import java.util.Scanner;
 
 public class Main {
+
+
     public static void displayMenu(){
         System.out.println("  hotel booking management  ");
 
@@ -16,26 +18,13 @@ public class Main {
 
     }
 
-    public static void Register(){
-        Scanner sn=new Scanner(System.in);
-        System.out.print("Please enter your First Name :");
-        String FirstName=sn.nextLine();
-        System.out.print("Please enter your Last Name :");
-        String LastName=sn.nextLine();
-        System.out.print("Please enter your Email ID : ");
-        String Email= sn.nextLine();
-        System.out.print("Please enter your Address : ");
-        String Address=sn.nextLine();
-        System.out.print("Please enter your phone number :");
-        long PhoneNumber= sn.nextLong();
 
-        RegisterAccount r=new RegisterAccount(FirstName,LastName,PhoneNumber,Email,Address);
-        r.WriteInfo();
-    }
     public static void main(String[] args) {
+
+        //creating util object;
+        Util util=new Util();
         Scanner scan = new Scanner(System.in);
         char choice;
-
         do{
             displayMenu();
             int number;
@@ -43,7 +32,7 @@ public class Main {
             number=sn.nextInt();
             switch(number){
                 case 1: System.out.println("welcome to register");
-                    Register();
+                    util.registerUser();
                     break;
                 case 2: System.out.println("Welcome to reservation");
                     break ;
