@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Java-Training2023
 # steps to run:
 <h2>There are three classes and they are : </h2>
@@ -15,7 +15,6 @@ go to your "<i>project structure</i>,you need to click on the <i>libraries</i> w
 <h4>To open project structure shortcut key->  <i>ctrl+alt+shift+s</i> .</h4>
 
 
-=======
 
 # Java-Training2023
 
